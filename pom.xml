@@ -202,10 +202,10 @@
         -Dog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
          to make all loggers asynchronous
         -->
-        <dependency>
-            <groupId>com.lmax</groupId>
-            <artifactId>disruptor</artifactId>
-            <version>${disruptor-maven-plugin.version}</version>
-        </dependency>
-    </dependencies>
-</project>
+        <!-- <dependency>
+             <groupId>com.lmax</groupId>
+             <artifactId>disruptor</artifactId>
+             <version>${disruptor-maven-plugin.version}</version>
+         </dependency> -->
+     </dependencies>
+ </project>
