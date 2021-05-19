@@ -14,7 +14,7 @@ spring:
       max-lifetime: 60000
       maximum-pool-size: 10
       minimum-idle: 1
-      pool-name: movieConnectionPooling
+      pool-name: moviesConnectionPooling
       transaction-isolation: TRANSACTION_READ_COMMITTED
       data-source-properties:
         cachePrepStmts: true
@@ -26,7 +26,7 @@ spring:
     password: sa
     platform: h2
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:~/movie-app;IFEXISTS=FALSE;AUTO_SERVER=TRUE;
+    url: jdbc:h2:file:~/katmovies-app;IFEXISTS=FALSE;AUTO_SERVER=TRUE;
     username: sa
   h2:
     console:
@@ -54,14 +54,4 @@ spring:
     show-sql: false
   freemarker:
     checkTemplateLocation: false
-  boot:
-    admin:
-      client:
-        url: http://localhost:9090
-        instance:
-          service-url: http://localhost:8080 # access url for the instance, needed for the SBA server to map properly (optional not required)
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
