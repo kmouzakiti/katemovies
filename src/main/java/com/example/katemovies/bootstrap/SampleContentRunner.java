@@ -34,14 +34,14 @@ public class SampleContentRunner implements CommandLineRunner {
 				Actor.builder().email("katrinJones.com")
 						.firstname("Kathrin").lastname("Jones")
 						.address("Plot 43")
-						.age("40").movieTitle("Shark").build(),
+						.age("43").movieTitle("Shark").build(),
 				Actor.builder().email("katemouza.com")
 						.firstname("Kate").lastname("Mouzakiti")
 						.address("Gargitou").nationality("Greek")
-						.age("40").movieTitle("A Spring Star is Born").build(),
+						.age("41").movieTitle("A Spring Star is Born").build(),
 				Actor.builder().email("tomhanks.com")
 						.firstname("Tom").lastname("Hanks")
-						.address("Gargitou").nationality("HalfGreek")
+						.address("Dream Street").nationality("HalfGreek")
 						.age("40").movieTitle("Forest Gamp").build()
 
 		);
