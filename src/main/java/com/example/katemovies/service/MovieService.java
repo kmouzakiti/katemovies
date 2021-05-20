@@ -4,14 +4,14 @@ package com.example.katemovies.service;
 import com.example.katemovies.domain.Movie;
 import com.example.katemovies.transfer.KeyValue;
 
-import java.math.BigDecimal;
-import java.util.List;
+
 
 
 public interface MovieService extends BaseService<Movie, Long> {
-    Movie findByEmail(String email);
+    Movie findByTitle(String title);
 
-    List<KeyValue<String, BigDecimal>> findCustomersPurchasedMostExpensiveProduct();
+
+    //Movie findMovieByActor(String firstName,String lastName);-->
 
 
 }

@@ -35,7 +35,7 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       # Whether to use Hibernate's newer IdentifierGenerator for AUTO, TABLE and SEQUENCE.
