@@ -1,7 +1,9 @@
 package com.example.katemovies.bootstrap;
 
 import com.example.katemovies.domain.Actor;
+import com.example.katemovies.domain.Movie;
 import com.example.katemovies.service.ActorService;
+import com.example.katemovies.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
@@ -10,11 +12,11 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Profile("movies-catalog")
+@Profile("katemovies-catalog")
 @RequiredArgsConstructor
 public class SampleContentRunner implements CommandLineRunner {
 	private final ActorService actorService;
-
+	private final MovieService movieService;
 
 	@Override
 	public void run(String... args) {
@@ -53,7 +55,17 @@ public class SampleContentRunner implements CommandLineRunner {
 		);
 		//@formatter:on
 
-		/*customerService.save(newCustomer);*/
+
 		actorService.saveAll(actors);
+
+		//@formatter:off
+		List<Movie> movies = List.of(
+				Movie.builder().title("The Postman").year("1990")
+						.rating("4/5").producer("F").build()
+
+
+		);
+
+		movieService.saveAll(movies);
 	}
 }
