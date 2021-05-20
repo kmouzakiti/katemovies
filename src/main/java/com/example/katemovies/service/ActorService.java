@@ -1,6 +1,7 @@
 package com.example.katemovies.service;
 
         import com.example.katemovies.domain.Actor;
+        import com.example.katemovies.domain.Movie;
         import com.example.katemovies.transfer.KeyValue;
 
 
@@ -8,9 +9,8 @@ package com.example.katemovies.service;
         import java.util.List;
 
 public interface ActorService extends BaseService<Actor, Long> {
-    Actor findByEmail(String email);
+    Actor findActorbyAge(String age);
 
-    List<KeyValue<String, BigDecimal>> findCustomersPurchasedMostExpensiveProduct();
 
 
 }

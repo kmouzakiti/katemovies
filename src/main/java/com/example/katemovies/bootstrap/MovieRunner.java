@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Profile("movies-catalog")
+@Profile("katemovies-catalog")
 @RequiredArgsConstructor
 public class MovieRunner implements CommandLineRunner {
 	private final MovieService movieService;
@@ -18,12 +18,17 @@ public class MovieRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		/*Actor newActor = Actor.builder().description("Mobile Phones").build();*/
+
 		//@formatter:off
 		List<Movie> movies = List.of(
 				Movie.builder().title("The Postman").year("1990")
-						.rating("4/5").producer("Hollywood").type("drama").build()
-
+						.rating("4/5").producer("Hollywood").type("comedy").build(),
+				Movie.builder().title("Shark").year("2008")
+						.rating("3/5").producer("Hollywood").type("drama").build(),
+				Movie.builder().title("Cast Away").year("2008")
+						.rating("1/5").producer("TomHanks").type("action").build(),
+				Movie.builder().title("Forest Gamp").year("1994")
+						.rating("1/5").producer("Robert Zemeckis").type("action").build()
 
 		);
 		//@formatter:on

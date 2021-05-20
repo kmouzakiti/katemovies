@@ -38,5 +38,7 @@ public class Movie extends com.example.katemovies.domain.BaseEntity {
     private String type;
 
 
+
+
 }
 

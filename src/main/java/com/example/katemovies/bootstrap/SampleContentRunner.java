@@ -23,34 +23,26 @@ public class SampleContentRunner implements CommandLineRunner {
 		/*Actor newActor = Actor.builder().description("Mobile Phones").build();*/
 		//@formatter:off
 		List<Actor> actors = List.of(
+				Actor.builder().email("johnPorter.com")
+						.firstname("Peter").lastname("Sellers")
+						.address("2955 Blackwell Street")
+						.age("50").movieTitle("The Postman").nationality("American").build(),
+				Actor.builder().email("MaryBlood.com")
+						.firstname("Mary").lastname("Blood")
+						.address("13 Jump Street")
+						.age("23").movieTitle("Taxi Driver").nationality("Alien").build(),
+				Actor.builder().email("katrinJones.com")
+						.firstname("Kathrin").lastname("Jones")
+						.address("Plot 43")
+						.age("40").movieTitle("Shark").build(),
 				Actor.builder().email("katemouza.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build()
-/*				Actor.builder().email("twetwt.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build(),
-				Actor.builder().email("teewr.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build(),
-				Actor.builder().email("trrrrref.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build(),
-				Actor.builder().email("treee.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build(),
-				Actor.builder().email("trrr.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build(),
-				Actor.builder().email("tr.com")
-						.firstname("John").lastname("Porter")
-						.address("2955 Blackwell Street")
-						.age(40).build()*/
+						.firstname("Kate").lastname("Mouzakiti")
+						.address("Gargitou").nationality("Greek")
+						.age("40").movieTitle("A Spring Star is Born").build(),
+				Actor.builder().email("tomhanks.com")
+						.firstname("Tom").lastname("Hanks")
+						.address("Gargitou").nationality("HalfGreek")
+						.age("40").movieTitle("Forest Gamp").build()
 
 		);
 		//@formatter:on
@@ -60,8 +52,10 @@ public class SampleContentRunner implements CommandLineRunner {
 
 		//@formatter:off
 		List<Movie> movies = List.of(
-				Movie.builder().title("The Postman").year("1990")
-						.rating("4/5").producer("F").build()
+				Movie.builder().title("Bohemian Rhapsody").year("2018")
+						.rating("5/5").producer("Anthony McCarten").build(),
+				Movie.builder().title("Lola ela Ksana").year("2018")
+						.rating("5/5").producer("Singer").type("comedy").build()
 
 
 		);

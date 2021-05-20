@@ -31,14 +31,14 @@ public class MovieController extends AbstractController<Movie> {
         return ResponseEntity.ok(ApiResponse.<Movie>builder().data(results).build());
     }
 
-  /*  @RequestMapping("/moviebyactor")
+    @RequestMapping("/moviebyActor")
     @GetMapping(params = {"actorname,actorlastname"})
-    public ResponseEntity<ApiResponse<MediaProduction>> findmoviebyActors(String actorname, String actorlastname) {
+    public ResponseEntity<ApiResponse<Movie>> findmoviesbyActorDetails(String actorfirstname, String actorlastname) {
 
-        logger.trace("Controller resolves to findMediaProductionByActors with params actorname={},actorlastname={}",actorname,actorlastname);
-        final MediaProduction results = mediaProductionService.findMediaProductionByActors(actorname,actorlastname);
+        logger.trace(" actorname={},actorlastname={}",actorfirstname,actorlastname);
+        final Movie results = movieService.findMovieByActor(actorfirstname,actorlastname);
 
-        return ResponseEntity.ok(ApiResponse.<MediaProduction>builder().data(results).build());
+        return ResponseEntity.ok(ApiResponse.<Movie>builder().data(results).build());
     }
-8*/
+
 }

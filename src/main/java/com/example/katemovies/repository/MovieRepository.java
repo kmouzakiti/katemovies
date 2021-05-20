@@ -13,4 +13,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     Movie findByTitle(String title);
 
 
+    @Query(value = "SELECT * FROM MOVIES M LEFT JOIN ACTORS AC ON M.TITLE = AC.MOVIETITLE  \n" +
+            "WHERE AC.FIRSTNAME LIKE ?1% AND AC.LASTNAME LIKE ?2%",nativeQuery = true)
+    Movie findMovieByActor(String firstName, String lastName);
+
 }

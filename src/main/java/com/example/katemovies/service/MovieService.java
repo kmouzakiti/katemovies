@@ -11,7 +11,7 @@ public interface MovieService extends BaseService<Movie, Long> {
     Movie findByTitle(String title);
 
 
-    //Movie findMovieByActor(String firstName,String lastName);-->
+    Movie findMovieByActor(String firstName,String lastName);
 
 
 }

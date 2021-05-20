@@ -31,11 +31,16 @@ public class Actor extends com.example.katemovies.domain.BaseEntity {
     @Column(length = 30, nullable = false)
     private String lastname;
 
-    private Integer age;
+    @Column(length = 2)
+    private String age;
 
     @Column(length = 50)
     private String address;
 
     @Column(length = 50)
     private String movieTitle;
+
+    @Column(length = 50)
+    private String nationality;
+
 }

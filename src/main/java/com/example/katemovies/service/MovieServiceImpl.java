@@ -30,15 +30,11 @@ public class MovieServiceImpl extends AbstractServiceImpl<Movie> implements Movi
         return movieRepository.findByTitle(title);
     }
 
-    //private final MovieRepository movieRepository;
 
-
-
-
-   /* @Override
+    @Override
     public Movie findMovieByActor (String firstName,String lastName) {
-        logger.info("Executed findMediaProductionByActors firstName:{},lastName{}",firstName,lastName);
-        return MovieRepository.findmoviebyActor( firstName, lastName);
+        logger.info("  FirstName:{},lastName{}",firstName,lastName);
+        return movieRepository.findMovieByActor( firstName, lastName);
     }
-*/
+
 }
